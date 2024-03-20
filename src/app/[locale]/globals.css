@@ -1,0 +1,128 @@
+@tailwind base;
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: red green;
+}
+@tailwind components;
+@tailwind utilities;
+.menu-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.bar {
+  width: 100%;
+  height: 2px;
+  background-color: #333;
+  margin-bottom: 5px;
+}
+
+.menu-toggle.open {
+  transform: rotate(90deg);
+}
+
+.menu-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.menu-list.open {
+  opacity: 1;
+}
+
+.menu-list li {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+:root {
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    font-size: 18px;
+    font-weight: bold;
+    color: brown;
+  }
+  --swiper-pagination-bullet-inactive-color: orange;
+  --swiper-pagination-color: rgb(255, 174, 0);
+  --swiper-pagination-bullet-size: 12px;
+  --swiper-pagination-bullet-horizontal-gap: 10px;
+  --swiper-pagination-position: absolute;
+ 
+  --swiper-pagination-bottom: 2%;
+  .swiper-pagination {
+    /* position: absolute; */
+  }
+
+  .swiper-button-prev:after {
+    position: absolute;
+    left: -5px;
+  }
+
+  .swiper-button-next::after {
+    position: absolute;
+    right: 0;
+  }
+}
+
+.second-div {
+  display: none; /* Initially hidden */
+  padding: 20px;
+  border: 1px solid #ddd;
+  margin-top: 50px; /* Adjust as needed */
+}
+
+.second-div.visible {
+  display: block; /* Show when visible */
+}
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+} */
