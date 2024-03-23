@@ -5,6 +5,15 @@
     "item3": "Umrah",
     "item4": "Fatwas"
   },
+  "Menu": {
+   
+    "item1": "Grand Mosque ",
+    "item2": "Makkah",
+    "item3": "Umrah",
+    "item4": "Fatwas",
+    "item5":"About Us"
+    
+  },
   "SubMain": {
     "item1": "Al Kaaba",
     "item2": "Parts of AL Kaaba",

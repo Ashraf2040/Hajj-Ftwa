@@ -19,35 +19,35 @@ import { useNavigation } from "react-router-dom";
 import Card from "../components/Card";
 import { useLocale, useMessages, useTranslations } from "next-intl";
 
-export default function Kaaba() {
-
+export default function Kaaba1() {
   const router = useRouter();
-  
-  // const t = useTranslations("Kaaba1");
-  const t = useTranslations("Kaaba1");
+
+  localStorage.setItem("routepath", 0);
   const locale = useLocale();
-  console.log(locale);
 
   const lang = locale === "en" ? "en" : "ar";
+
   return (
     <>
       <div className=" ">
         <img src="/2.png" alt="item" />
         <div className="justify-center flex py-4 px-4">
-          <button onClick={()=>router.back()}>
-            <svg
-              height="30"
-              viewBox="0 0 16 16"
-              width="20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z"
-                fill="#246499"
-              />
-            </svg>
-          </button>
-          <p className="w-full text-center text-3xl font-bold">
+          <Link href="/">
+            <button>
+              <svg
+                height="30"
+                viewBox="0 0 16 16"
+                width="20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z"
+                  fill="#246499"
+                />
+              </svg>
+            </button>
+          </Link>
+          <p className="w-full text-center text-red-500 text-2xl font-bold">
             {locale === "en" ? "The Sacred House “Kaaba”" : "البيت الحرام"}
           </p>
         </div>
@@ -79,9 +79,10 @@ export default function Kaaba() {
 const SubCards = {
   ar: [
     {
-     title :"",
-      subTitle:"",
-      parag: "البيت الحرام (الكعبة المشرفة) هو ذلك البناء مكّعب الشكل؛ الذي يقع في وسط المسجد الحرام",
+      title: "",
+      subTitle: "",
+      parag:
+        "البيت الحرام (الكعبة المشرفة) هو ذلك البناء مكّعب الشكل؛ الذي يقع في وسط المسجد الحرام",
       list: [],
     },
     {
@@ -111,29 +112,31 @@ const SubCards = {
     },
     {
       title: "    ",
-      subTitle:"صور تعظيم الكعبة المشرَّفة ",
-      parag: "عظمةُ الكعبة المشرّفة نابعةٌ من عظمة الله تعالى؛ الذي أمر بتعظيمها؛ ورفع قَدْرها على سائر البيّنات.",
+      subTitle: "صور تعظيم الكعبة المشرَّفة ",
+      parag:
+        "عظمةُ الكعبة المشرّفة نابعةٌ من عظمة الله تعالى؛ الذي أمر بتعظيمها؛ ورفع قَدْرها على سائر البيّنات.",
       list: [],
     },
     {
       title: "    ",
-      subTitle:" صور تعظيم الكعبة المشرَّفة ",
-      parag: " أن الله تعالي اضاف البيت الي نفسه الشريفة بقوله تعالي (وطهر بيتي) ..(الحج:26)",
+      subTitle: " صور تعظيم الكعبة المشرَّفة ",
+      parag:
+        " أن الله تعالي اضاف البيت الي نفسه الشريفة بقوله تعالي (وطهر بيتي) ..(الحج:26)",
       list: [],
     },
     {
       title: "    ",
-      subTitle:
-        "صور تعظيم الكعبة المشرَّفة ",
-      parag: "أن الله تعالى حرّم مكة يوم خلق السموات والأرض؛ تعظيمًا لحُرمة بيته الذي ستضمُّه جنباتها، وعلى هذا حُرِّمت أمور مباحة في غير مكة؛ تمييزًا وتعظيمًا لها.",
+      subTitle: "صور تعظيم الكعبة المشرَّفة ",
+      parag:
+        "أن الله تعالى حرّم مكة يوم خلق السموات والأرض؛ تعظيمًا لحُرمة بيته الذي ستضمُّه جنباتها، وعلى هذا حُرِّمت أمور مباحة في غير مكة؛ تمييزًا وتعظيمًا لها.",
       list: [],
     },
 
     {
       title: "    ",
-      subTitle:
-        "صور تعظيم الكعبة المشرَّفة ",
-      parag: "أن الله تعالى قد توعّد كلّ من أرادها بسوء أن يهلكه، كما أهلك أبرهة الأشرم.",
+      subTitle: "صور تعظيم الكعبة المشرَّفة ",
+      parag:
+        "أن الله تعالى قد توعّد كلّ من أرادها بسوء أن يهلكه، كما أهلك أبرهة الأشرم.",
       list: [],
     },
     {
@@ -203,9 +206,9 @@ const SubCards = {
   ],
   en: [
     {
-      parag: " The Sacred House “Kaaba” is that cube-shaped building located in the center of the Sacred Mosque (Masjid al-Haram).",
-      parag1:
-        "",
+      parag:
+        " The Sacred House “Kaaba” is that cube-shaped building located in the center of the Sacred Mosque (Masjid al-Haram).",
+      parag1: "",
       list: [],
     },
     {

@@ -4,9 +4,12 @@ import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 const MenuHum = ({ handleButtonClick }) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const t = useTranslations("Menu");
 
   return (
     <nav
@@ -46,35 +49,34 @@ const MenuHum = ({ handleButtonClick }) => {
                 onClick={() => handleButtonClick(0)}
                 className="block mt-4 text-xl  lg:inline-block lg:mt-0  mr-4 w-full font-bold  my-1  rounded-lg p-1 hover:bg-gray-100 hover:text-red-600"
               >
-                Grand Mosque
+                {t("item1")}
               </Link>
               <Link
                 href="#target"
                 onClick={() => handleButtonClick(1)}
                 className="block mt-4 text-xl   lg:inline-block lg:mt-0   mr-4 w-full font-bold  my-1  rounded-lg p-1 hover:bg-gray-100 hover:text-red-600"
               >
-                Makkah
+                {t("item2")}
               </Link>
               <Link
                 href="#target"
                 onClick={() => handleButtonClick(2)}
                 className="block mt-4 text-xl  lg:inline-block lg:mt-0   mr-4 w-full font-bold  my-1  rounded-lg p-1 hover:bg-gray-100 hover:text-red-600"
               >
-                Al Kaaba
+                {t("item3")}
               </Link>
               <Link
                 href="#target"
                 onClick={() => handleButtonClick(3)}
-               
                 className="block mt-4 text-xl   lg:inline-block lg:mt-0   mr-4 w-full font-bold  my-1 hover:bg-gray-100 hover:text-red-600  rounded-lg p-1"
               >
-                Fatwas
+                {t("item4")}
               </Link>
               <Link
                 href="#target"
                 className=" mt-4 text-xl flex justify-center lg:inline-block lg:mt-0   mr-4 w-full font-bold  my-1  rounded-lg p-1 hover:bg-gray-100 hover:text-red-600"
               >
-                About US
+                {t("item5")}
               </Link>
             </div>
           </div>

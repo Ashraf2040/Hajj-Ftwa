@@ -53,8 +53,8 @@ export default function MainSwiper({
               <Image
                 src={item.src}
                 alt="Background Imag"
-                layout="fill" // Fills the entire container
-                objectFit="cover" // Optionally adjust how the image fits (e.g., 'cover', 'contain')
+                fill // Fills the entire container
+                className="object-cover"
               />
 
               {index === 3 ? (
@@ -67,8 +67,6 @@ export default function MainSwiper({
                       strokeWidth={4}
                       spacing={2}
                       className="text-yellow-300  animate-bounce  "
-                      onClick={() => handleButtonClick(index)}
-                      onDrag={handleTouch}
                     />
                   </Link>
                 </div>
@@ -103,13 +101,13 @@ export default function MainSwiper({
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
-                        stroke-width="2"
+                        strokeWidth="2"
                         stroke="currentColor"
-                        class="w-6 h-6"
+                        className="w-6 h-6"
                       >
                         <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                           d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5"
                           className="h-12"
                         />
@@ -134,7 +132,7 @@ export default function MainSwiper({
 
 const MainCards = [
   {
-    src: "/1.jpeg",
+    src: "/Masjid-al-haram.jpg",
   },
   {
     src: "/2.jpg",
@@ -143,6 +141,6 @@ const MainCards = [
     src: "/5.png",
   },
   {
-    src: "/4.png",
+    src: "/123.jpg",
   },
 ];

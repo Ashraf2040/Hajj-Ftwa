@@ -44,7 +44,7 @@ export default function CardContent({
         <Typography
           variant="h1"
           color="black"
-          className="mb-2 font-extrabold text-[22px] flex justify-center   leading-[2] "
+          className="mb-2 font-extrabold text-[22px] flex justify-center    leading-[2] "
         >
           {head}
         </Typography>
@@ -64,8 +64,8 @@ export default function CardContent({
           color="black"
           className={`${
             locale === "ar"
-              ? "mb-3 font-extrabold  text-center text-4xl leading-[1.5]"
-              : "mb-3 font-bold   text-justify  overflow-hidden    text-2xl leading-[1.5]"
+              ? "mb-3 font-extrabold  text-center text-3xl leading-[1.5]"
+              : "mb-3 font-bold   text-justify  overflow-hidden    text-xl leading-[1.5]"
           }`}
         >
           {parag}
@@ -78,7 +78,7 @@ export default function CardContent({
           {parag1}
         </Typography>
         <Typography
-          variant="ul"
+          // variant="ul"
           color="black"
           className="mb-6 text-lg font-bold text-start leading-[2]"
         >

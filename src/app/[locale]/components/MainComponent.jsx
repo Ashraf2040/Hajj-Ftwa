@@ -8,17 +8,20 @@ import MainCaresoul from "./MainCaresoul";
 export default function MainComponent() {
   const [showDiv, setShowDiv] = useState(false);
   const [typeIndex, setTypeIndex] = useState("");
+  const [refDiv, setRefDiv] = useState(null);
 
   const handleButtonClick = (id) => {
     setShowDiv(true);
     setTypeIndex(id);
     console.log(id);
   };
+
   console.log(typeIndex);
-  const divRef = useRef(null);
+  const divRef = useRef(refDiv);
+  console.log(divRef.current);
 
   useEffect(() => {
-    if (divRef.current) {
+    if (divRef.current || routePath) {
       // Delay scrolling slightly for smoother animation
       setTimeout(() => {
         divRef.current.scrollIntoView({ behavior: "smooth" });
@@ -26,9 +29,22 @@ export default function MainComponent() {
     }
   }, [divRef]);
 
-  
-  
-  
+  const routePath = localStorage.getItem("routepath");
+  console.log(routePath);
+
+  useEffect(() => {
+    if (routePath) {
+      setRefDiv("target");
+      
+      handleButtonClick(0)
+    }
+  },[])
+
+  // useEffect(() => {
+  //   if (routePath) {
+  //     handleButtonClick(0)
+  //   }
+  // }, [routePath]);
 
   return (
     <div className=" relative w-screen h-screen">
@@ -37,7 +53,6 @@ export default function MainComponent() {
         setShowDiv={setShowDiv}
         setTypeIndex={setTypeIndex}
       />
-     
 
       {showDiv && (
         <div
