@@ -58,7 +58,7 @@ export default function MainSwiper({
               />
 
               {index === 3 ? (
-                <div className="flex min-h-[30%] flex-col gap-4 absolute bottom-0 pt-1 pb-1  w-full  justify-around items-center bg-gradient-to-tr text-yellow-300 from-black to-transparent  ">
+                <div className="flex min-h-[30%] flex-col gap-4 absolute bottom-0 pt-1 pb-1  w-full  justify-around items-center bg-gradient-to-tr text-yellow-500 from-black to-transparent  ">
                   <h1 className=" font-bold italic text-3xl ">
                     {t(`item${index + 1}`)}
                   </h1>
@@ -71,7 +71,7 @@ export default function MainSwiper({
                   </Link>
                 </div>
               ) : (
-                <div className="flex min-h-[30%] flex-col gap-4 absolute bottom-0 pt-1 pb-1  w-full  justify-around items-center bg-gradient-to-tr text-yellow-300 from-black to-transparent    ">
+                <div className="flex min-h-[30%] flex-col gap-4 absolute bottom-0 pt-1 pb-1  w-full  justify-around items-center bg-gradient-to-tr text-yellow-300 from-black to-transparent font-extrabold    ">
                   <h1 className=" font-semibold italic text-3xl mt-2">
                     {t(`item${index + 1}`)}
                   </h1>
@@ -132,7 +132,7 @@ export default function MainSwiper({
 
 const MainCards = [
   {
-    src: "/Masjid-al-haram.jpg",
+    src: "/01.png",
   },
   {
     src: "/2.jpg",

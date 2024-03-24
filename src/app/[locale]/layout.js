@@ -1,8 +1,8 @@
-import {Poppins } from "next/font/google";
+import {Poppins,Tauri } from "next/font/google";
 import "./globals.css";
 import { NextIntlClientProvider, useMessages } from "next-intl";
 
-const inter = Poppins({ subsets: ["latin"], weight:[ "400","700"] });
+const inter = Tauri({ subsets: ["latin"], weight:[ "400"] });
 
 // export const metadata = {
 //   title: "Ai-Mecca Touring",

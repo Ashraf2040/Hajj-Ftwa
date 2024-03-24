@@ -17,11 +17,12 @@ export default function RootLayout({ children, params: { locale } }) {
   const messages = useMessages();
   return (
     <html lang={locale} className="m-0 p-0 scroll-smooth " suppressHydrationWarning>
-      <body className={`${inter.className} relative h-full w-full `}>
+      <body className={`${inter.className} relative   w-full min-h-screen  `}>
         <NextIntlClientProvider messages={messages}>
             <Header />
           {children}
-       <div className="absolute bottom-0 w-full"><Footer /></div>   
+       <div className="fixed bottom-0 w-full">
+        <Footer /></div>   
         </NextIntlClientProvider>
       </body>
     </html>
