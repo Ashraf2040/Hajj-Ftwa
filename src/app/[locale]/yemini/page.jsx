@@ -22,7 +22,7 @@ import { useLocale, useMessages, useTranslations } from "next-intl";
 export default function Yemini() {
   function getLinkHref() {
     // Logic to determine the URL
-    return "/#target";
+    return "/en#target7";
   }
 
   // const t = useTranslations("Kaaba1");

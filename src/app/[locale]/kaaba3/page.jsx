@@ -22,7 +22,7 @@ import { useLocale, useMessages, useTranslations } from "next-intl";
 export default function Kaaba3() {
   function getLinkHref() {
     // Logic to determine the URL
-    return "/#target";
+    return "/en#target1";
   }
 
   // const t = useTranslations("Kaaba1");

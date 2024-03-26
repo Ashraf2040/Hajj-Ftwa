@@ -4,7 +4,7 @@ import { ChevronDown, ChevronsDown } from "lucide-react";
 import { useBuildId } from "next/config";
 import "swiper/css";
 import "swiper/css/pagination";
-
+import Cardsss from "./cards/Cardsss";
 import "./mainSwiper.module.css";
 
 import { Navigation, Pagination } from "swiper/modules";
@@ -14,19 +14,11 @@ import { useLocale, useTranslations } from "next-intl";
 import LocalSwitcher from "./LocalSwitcher";
 import Image from "next/image";
 
-export default function MainSwiper({
-  handleButtonClick,
-  typeIndex,
-  setTypeIndex,
-}) {
+export default function MainSwiper({ handleButtonClick, typeIndex }) {
   const t = useTranslations("Main");
 
   const locale = useLocale();
   const url = `/${locale}/fatwa`;
-
-  const handleTouch = (index) => {
-    handleButtonClick(index);
-  };
 
   return (
     <>
@@ -39,61 +31,34 @@ export default function MainSwiper({
       >
         {MainCards.map((item, index) => {
           return (
-            <SwiperSlide
-              key={index}
-              // style={{
-              //   backgroundImage: `url(${item.src})`,
-              //   width: "100%",
-              //   height: "100%",
-              //   backgroundSize: "cover",
-              //   backgroundPosition: "center",
-
-              // }}
-            >
+            <SwiperSlide key={index}>
               <Image
                 src={item.src}
                 alt="Background Imag"
-                fill // Fills the entire container
+                fill
                 className="object-cover"
               />
 
               {index === 3 ? (
-                <div className="flex min-h-[30%] flex-col gap-4 absolute bottom-0 pt-1 pb-1  w-full  justify-around items-center bg-gradient-to-tr text-yellow-500 from-black to-transparent  ">
-                  <h1 className=" font-bold italic text-3xl ">
+                <div className="absolute flex justify-center flex-col items-center bottom-0 left-0 right-0 h-40 bg-black bg-opacity-50 backdrop-blur text-white p-4 rounded-b-lg transform-scale-100 gap-8  ">
+                  <h1 className=" font-bold  text-3xl ">
                     {t(`item${index + 1}`)}
                   </h1>
                   <Link href={url}>
                     <ChevronDown
                       strokeWidth={4}
                       spacing={2}
-                      className="text-yellow-300  animate-bounce  "
+                      className="text-white  animate-bounce  "
                     />
                   </Link>
                 </div>
               ) : (
-                <div className="flex min-h-[30%] flex-col gap-4 absolute bottom-0 pt-1 pb-1  w-full  justify-around items-center bg-gradient-to-tr text-yellow-300 from-black to-transparent font-extrabold    ">
-                  <h1 className=" font-semibold italic text-3xl mt-2">
+                <div className="absolute flex justify-center flex-col items-center bottom-0 left-0 right-0 h-40  text-white p-4 rounded-b-lg transform-scale-100 gap-8  ">
+                  <h1 className=" font-semibold tracking-widest text-red-500 px-4 py-2 rounded-lg text-4xl   backdrop-blur mt-2">
                     {t(`item${index + 1}`)}
                   </h1>
                   <Link href="#target" className="mb-10 animate-bounce">
-                    {/* <ChevronsDown
-              strokeWidth={4}
-              spacing={2}
-              className="text-red-900  animate-bounce  "
-              onClick={() => handleButtonClick(index)}
-              onDrag={() => handleButtonClick(index)}
-            /> */}
-                    {/* <ChevronDown
-                      strokeWidth={4}
-                      spacing={2}
-                      className="text-yellow-300 animate-bounce  "
-                      onClick={() => handleButtonClick(index)}
-                      onDrag={() => handleButtonClick(index)}
-                    /> */}
                     <button
-                      // onClick={() => handleButtonClick(index)}
-                      // // onMouseEnter={() => handleButtonClick(index)}
-                      // // onTouchMove={() => handleButtonClick(index)}
                       onClick={() => handleButtonClick(index)}
                       className="animate-ease-in"
                     >
@@ -103,7 +68,7 @@ export default function MainSwiper({
                         viewBox="0 0 24 24"
                         strokeWidth="2"
                         stroke="currentColor"
-                        className="w-6 h-6"
+                        className="w-6 h-6 text-red-500"
                       >
                         <path
                           strokeLinecap="round"
@@ -132,13 +97,13 @@ export default function MainSwiper({
 
 const MainCards = [
   {
-    src: "/01.png",
+    src: "/6.jpg",
   },
   {
-    src: "/2.jpg",
+    src: "/9.jpg",
   },
   {
-    src: "/5.png",
+    src: "/5.jpg",
   },
   {
     src: "/123.jpg",

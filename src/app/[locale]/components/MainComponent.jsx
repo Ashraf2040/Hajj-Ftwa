@@ -8,51 +8,64 @@ import MainCaresoul from "./MainCaresoul";
 export default function MainComponent() {
   const [showDiv, setShowDiv] = useState(false);
   const [typeIndex, setTypeIndex] = useState("");
-  const [refDiv, setRefDiv] = useState(null);
+
+  const [showParent, setShowParent] = useState(true);
+  const [isIntersecting, setIsIntersecting] = useState(false);
 
   const handleButtonClick = (id) => {
     setShowDiv(true);
     setTypeIndex(id);
-    console.log(id);
   };
 
-  console.log(typeIndex);
-  const divRef = useRef(refDiv);
-  console.log(divRef.current);
+  const divRef = useRef(null);
+  // const ref = useRef(null);
+
+  const handleScroll = () => {
+    if (divRef.current) {
+      divRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   useEffect(() => {
-    if (divRef.current || routePath) {
-      // Delay scrolling slightly for smoother animation
+    if (divRef.current) {
       setTimeout(() => {
         divRef.current.scrollIntoView({ behavior: "smooth" });
       }, 100);
     }
   }, [divRef]);
+  if (isIntersecting) {
+    console.log("observed");
+  }
 
-  const routePath = localStorage.getItem("routepath");
-  console.log(routePath);
-
-  useEffect(() => {
-    if (routePath) {
-      setRefDiv("target");
-      
-      handleButtonClick(0)
-    }
-  },[])
-
+  // const hash = window.location.hash;
+  // console.log(hash);
+  // const idReturned = Number(hash.charAt(hash.length - 1));
+  // console.log(idReturned)
   // useEffect(() => {
-  //   if (routePath) {
-  //     handleButtonClick(0)
+  //   if (hash) {
+  //     handleButtonClick(idReturned);
   //   }
-  // }, [routePath]);
+  // });
+
+  // const idReturned = localStorage.getItem("index");
+  // useEffect(() => {
+  //   if (idReturned) {
+  //     handleButtonClick(idReturned);
+  //     setTimeout(() => {
+  //       divRef.current.scrollIntoView({ behavior: "smooth" });
+  //     }, 100);
+  //   }
+  // });
 
   return (
     <div className=" relative w-screen h-screen">
-      <MainCaresoul
-        handleButtonClick={handleButtonClick}
-        setShowDiv={setShowDiv}
-        setTypeIndex={setTypeIndex}
-      />
+      <div className={`h-full ${showParent ? "" : "hidden"}`}>
+        <MainCaresoul
+          handleButtonClick={handleButtonClick}
+          setShowDiv={divRef.current}
+          setTypeIndex={setTypeIndex}
+        />
+      </div>
 
       {showDiv && (
         <div

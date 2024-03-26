@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useRef } from "react";
 import {
   Card,
   CardHeader,
@@ -13,6 +13,7 @@ import { useLocale, useTranslations } from "next-intl";
 
 export default function SubCardsNew({ typeIndex }) {
   const t = useTranslations("SubMain");
+
   return (
     <div className="h-full w-full flex flex-col   ">
       {mainItems[typeIndex].subCards.map((item, index) => (
@@ -32,15 +33,24 @@ const CardItem = ({ imgSrc, subTitle, routeUrl }) => {
 
   const locale = useLocale();
   const url = `/${locale}/${routeUrl}`;
-  
+
   return (
     <Link href={url} className=" ">
       <Card className=" h-full top-0 m-4 p-0 bg-neutral-700 border-2 border-white ">
         <CardHeader className="rounded-none">
-          <Image src={imgSrc} alt="log" width={400} height={400}  className="h-3/5"/>
+          <Image
+            src={imgSrc}
+            alt="log"
+            width={400}
+            height={400}
+            className="h-3/5"
+          />
         </CardHeader>
         <CardBody className="text-center ">
-          <Typography variant="h4"  className=" my-4 text-white  ">
+          <Typography
+            variant="h4"
+            className=" my-4 ring-1 ring-black shadow-md shadow-yellow-400 bg-white text-slate-700  rounded-lg  py-3  "
+          >
             {subTitle}
           </Typography>
         </CardBody>
@@ -58,7 +68,7 @@ const mainItems = [
         routeUrl: "kaaba1",
       },
       {
-        imgSrc: "/sub/kaaba2.jpg",
+        imgSrc: "/sub/1.jpg",
         subTitle: "Parts of Al Kaaba",
         routeUrl: "kaaba2",
       },

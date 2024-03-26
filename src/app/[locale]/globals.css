@@ -65,8 +65,8 @@
     font-weight: bold;
     color: brown;
   }
-  --swiper-pagination-bullet-inactive-color: orange;
-  --swiper-pagination-color: rgb(255, 174, 0);
+  --swiper-pagination-bullet-inactive-color: white;
+  --swiper-pagination-color: #EF4444;
   --swiper-pagination-bullet-size: 12px;
   --swiper-pagination-bullet-horizontal-gap: 10px;
   --swiper-pagination-position: absolute;

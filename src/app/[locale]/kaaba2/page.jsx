@@ -36,7 +36,7 @@ export default function Kaaba2() {
       <div className="">
         
         <div className="justify-center  flex py-4 px-4">
-          <Link href={getLinkHref()}>
+          <Link href="/en#target0">
             <svg
               height="30"
               viewBox="0 0 16 16"

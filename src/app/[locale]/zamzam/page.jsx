@@ -22,7 +22,7 @@ import { useLocale, useMessages, useTranslations } from "next-intl";
 export default function Zamzam() {
   function getLinkHref() {
     // Logic to determine the URL
-    return "/#target";
+    return "/en#target8";
   }
 
   // const t = useTranslations("Kaaba1");
@@ -34,7 +34,6 @@ export default function Zamzam() {
   return (
     <>
       <div className=" ">
-      
         <div className="justify-center flex py-4 px-4">
           <Link href={getLinkHref()}>
             <svg
@@ -70,7 +69,7 @@ export default function Zamzam() {
               parag={item.parag}
               parag1={item.parag1}
               ul={item.list}
-            src={item.imgSrc}
+              src={item.imgSrc}
             />
           </SwiperSlide>
         ))}
@@ -85,7 +84,8 @@ const SubCards = {
       title: "",
       imgSrc: "/sub/zam.jpg",
       subTitle: "",
-      parag: "زمزم هو ذلك الماء المبارك الذي نبع من الأرض بمكة حين ضرب جبريل عليه السلام بجناحه الأرض. ",
+      parag:
+        "زمزم هو ذلك الماء المبارك الذي نبع من الأرض بمكة حين ضرب جبريل عليه السلام بجناحه الأرض. ",
       list: [],
     },
     {
@@ -97,7 +97,7 @@ const SubCards = {
         "هَزْمَةُ جِبْرِيلَ عَلَيْهِ السَّلَام.",
         "سُقْيَا اللهِ إِسْمَاعِيلَ عَلَيْهِ السَّلَام.",
         "بَرَّة.",
-        "حفيرة عبد المطلب؛ لأنه حفرها بعد أن ظلت مخفية مدة قرون."
+        "حفيرة عبد المطلب؛ لأنه حفرها بعد أن ظلت مخفية مدة قرون.",
       ],
     },
     {
@@ -117,7 +117,8 @@ const SubCards = {
       title: "",
       imgSrc: "/sub/zam.jpg",
       subTitle: "",
-      parag: "قدّر بعض العلماء عُمْر ظهور ماء زمزم على وجه الأرض منذ أن ظهر للسيدة هاجر أم سيدنا إسماعيل بحوالي خمسة آلاف سنة.      ",
+      parag:
+        "قدّر بعض العلماء عُمْر ظهور ماء زمزم على وجه الأرض منذ أن ظهر للسيدة هاجر أم سيدنا إسماعيل بحوالي خمسة آلاف سنة.      ",
       list: [],
     },
     {
@@ -127,10 +128,9 @@ const SubCards = {
       parag: "",
       list: [
         "يقع بئر زمزم قرب الكعبة المشرفة على بعد 21م منها، جنوبي مقام إبراهيم.",
-        "يبعد زمزم عن مقام إبراهيم 18 مترًا."
+        "يبعد زمزم عن مقام إبراهيم 18 مترًا.",
       ],
     },
-   
 
     {
       title: "",
@@ -144,7 +144,8 @@ const SubCards = {
       imgSrc: "/sub/zam.jpg",
       subTitle: "",
       parag: "ماء زمزم خير ماء على وجه الأرض وهو طعام وشفاء.      ",
-      parag1:"عن ابن عباس رضي الله عنهما، قال: قال رسول الله صلى الله عليه وسلم: (خيرُ ماءٍ على وجْهِ الأرضِ ماءُ زمزمَ، فيه طعامٌ من الطُّعْمِ، وشِفاءٌ من السُّقْمِ)      ",
+      parag1:
+        "عن ابن عباس رضي الله عنهما، قال: قال رسول الله صلى الله عليه وسلم: (خيرُ ماءٍ على وجْهِ الأرضِ ماءُ زمزمَ، فيه طعامٌ من الطُّعْمِ، وشِفاءٌ من السُّقْمِ)      ",
       list: [],
     },
     {
@@ -152,7 +153,8 @@ const SubCards = {
       imgSrc: "/sub/zam.jpg",
       subTitle: "",
       parag: "ماء زمزم لما شُرب له.      ",
-      parag1:"عن جابر رضي الله عنه قال: قال رسول الله صلى الله عليه وسلم: (ماء زمزم لما شرب له)      ",
+      parag1:
+        "عن جابر رضي الله عنه قال: قال رسول الله صلى الله عليه وسلم: (ماء زمزم لما شرب له)      ",
       list: [],
     },
     {
@@ -160,7 +162,8 @@ const SubCards = {
       imgSrc: "/sub/zam.jpg",
       subTitle: "",
       parag: "ماء زمزم يخفّف من شدة الحمى.      ",
-      parag1:"عن أبي جمرة الضبعي قال: كنت أجالس ابن عباس بمكة فأخذتني الحمى فقال: أبردها عنك بماء زمزم، فإن رسول الله صلى الله عليه وسلم قال: (الحمى من فيح جهنم فأبردوها بالماء أو قال بماء زمزم)      ",
+      parag1:
+        "عن أبي جمرة الضبعي قال: كنت أجالس ابن عباس بمكة فأخذتني الحمى فقال: أبردها عنك بماء زمزم، فإن رسول الله صلى الله عليه وسلم قال: (الحمى من فيح جهنم فأبردوها بالماء أو قال بماء زمزم)      ",
       list: [],
     },
     {
@@ -173,23 +176,22 @@ const SubCards = {
         "الشُّرب قائمًا.",
         "الشُّرب باليد اليمنى.",
         "الشُّرب ثلاثًا.",
-        "عدم التنفس في الإناء."
+        "عدم التنفس في الإناء.",
       ],
     },
-   
+
     {
       title: "",
       imgSrc: "/sub/zam.jpg",
       subTitle: "من أحكام زمزم وآداب شربه:      ",
       parag: "",
       list: [
-        "التضلّع منه عند الشُّرب قدر المستطاع.", 
+        "التضلّع منه عند الشُّرب قدر المستطاع.",
         "الصبُّ منه على الرأس والوجه.",
         "استحضار نية الانتفاع به عند شربه.",
         "اليقين بأنه قادر -بإذن الله تعالى- على شفاء الأسقام والأمراض مهما كانت مستعصية.",
       ],
     },
-   
 
     {
       title: "",
@@ -201,21 +203,17 @@ const SubCards = {
         "حمد الله تعالى بعد الشُّرب منه.",
         "يجوز الوضوء بماء زمزم.",
         "يجوز إهداء ماء زمزم والإتحاف منه.",
-        "يجوز حمل ماء زمزم إلى الديار والتزوّد به إن أمكن."
+        "يجوز حمل ماء زمزم إلى الديار والتزوّد به إن أمكن.",
       ],
     },
-   
-    
-    
-   
   ],
   en: [
-   
     {
       title: "",
       imgSrc: "/sub/zam.jpg",
       subTitle: "",
-      parag: "Zamzam is that blessed water that sprang from the ground in Makkah when Gabriel (peace be upon him) struck the earth with his wing.      ",
+      parag:
+        "Zamzam is that blessed water that sprang from the ground in Makkah when Gabriel (peace be upon him) struck the earth with his wing.      ",
       list: [],
     },
     {
@@ -227,7 +225,7 @@ const SubCards = {
         "Hazrat Jibreel (Jibreel's Stroke)",
         "Sufficient for Ishmael by Allah",
         "Barrah",
-        "The Excavation of Abdul-Muttalib; because he excavated it after it was hidden for centuries."
+        "The Excavation of Abdul-Muttalib; because he excavated it after it was hidden for centuries.",
       ],
     },
     {
@@ -240,14 +238,15 @@ const SubCards = {
         "Filling the Bellies; because its water satiates and satisfies.",
         "The Righteous Drink",
         "Food of Foods",
-        "Cure for Illness"
+        "Cure for Illness",
       ],
     },
     {
       title: "",
       imgSrc: "/sub/zam.jpg",
       subTitle: "",
-      parag: "Some scholars have estimated the age of Zamzam water on the face of the earth to be about five thousand years since it first appeared for Hagar, the mother of our master Ishmael.      ",
+      parag:
+        "Some scholars have estimated the age of Zamzam water on the face of the earth to be about five thousand years since it first appeared for Hagar, the mother of our master Ishmael.      ",
       list: [],
     },
     {
@@ -257,24 +256,26 @@ const SubCards = {
       parag: "",
       list: [
         "Zamzam well is located near the Sacred Kaaba, about 21 meters from it, south of the Station of Ibrahim.",
-        "The distance from Zamzam to the Station of Ibrahim is 18 meters."
+        "The distance from Zamzam to the Station of Ibrahim is 18 meters.",
       ],
     },
-    
 
     {
       title: "",
       imgSrc: "/sub/zam.jpg",
       subTitle: "Uses of Zamzam Water:      ",
-      parag: "The chest of the Prophet Muhammad (peace be upon him) was washed with Zamzam water.      ",
+      parag:
+        "The chest of the Prophet Muhammad (peace be upon him) was washed with Zamzam water.      ",
       list: [],
     },
     {
       title: "",
       imgSrc: "/sub/zam.jpg",
       subTitle: "",
-      parag: "Zamzam water is the best water on earth and is both food and a cure.      ",
-      parag1:"Ibn Abbas (may Allah be pleased with him) reported that the Messenger of Allah (peace be upon him) said: The best water on the face of the earth is the water of Zamzam; in it is nourishment and a cure for illness.      ",
+      parag:
+        "Zamzam water is the best water on earth and is both food and a cure.      ",
+      parag1:
+        "Ibn Abbas (may Allah be pleased with him) reported that the Messenger of Allah (peace be upon him) said: The best water on the face of the earth is the water of Zamzam; in it is nourishment and a cure for illness.      ",
       list: [],
     },
     {
@@ -282,7 +283,8 @@ const SubCards = {
       imgSrc: "/sub/zam.jpg",
       subTitle: "",
       parag: "Zamzam water is for what it is drunk for.      ",
-      parag1:"Jabir (may Allah be pleased with him) reported that the Messenger of Allah (peace be upon him) said: The water of Zamzam is for what it is drunk for.      ",
+      parag1:
+        "Jabir (may Allah be pleased with him) reported that the Messenger of Allah (peace be upon him) said: The water of Zamzam is for what it is drunk for.      ",
       list: [],
     },
     {
@@ -290,7 +292,8 @@ const SubCards = {
       imgSrc: "/sub/zam.jpg",
       subTitle: "",
       parag: "Zamzam Water Reduces Fever Severity: ",
-      parag1:"Abu Jamrah Al-Duba’i said: I was sitting with Ibn Abbas in Mecca when I caught a fever. He told me to cool it with Zamzam water, for the Messenger of Allah (peace be upon him) said: 'Fever is from the heat of Hell, so cool it with water or he said with Zamzam water.' ",
+      parag1:
+        "Abu Jamrah Al-Duba’i said: I was sitting with Ibn Abbas in Mecca when I caught a fever. He told me to cool it with Zamzam water, for the Messenger of Allah (peace be upon him) said: 'Fever is from the heat of Hell, so cool it with water or he said with Zamzam water.' ",
       list: [],
     },
     {
@@ -303,10 +306,9 @@ const SubCards = {
         "Drink while standing.",
         "Drink with the right hand.",
         "Drink in three breaths.",
-        "Do not breathe into the vessel."
+        "Do not breathe into the vessel.",
       ],
     },
-   
 
     {
       title: "",
@@ -317,32 +319,22 @@ const SubCards = {
         "Drink to your fill as much as possible.",
         "Pour water over the head and face.",
         "Intend to benefit from it when drinking.",
-        "Have certainty that it can - by the permission of Allah the Almighty - cure diseases and ailments, no matter how severe."
+        "Have certainty that it can - by the permission of Allah the Almighty - cure diseases and ailments, no matter how severe.",
       ],
     },
-    
 
     {
       title: "",
       imgSrc: "/sub/zam.jpg",
       subTitle: "Rules and Etiquettes of Drinking Zamzam: ",
       parag: "",
-      list:  [
+      list: [
         "Supplicate to Allah Almighty and ask for the best in this life and the hereafter while drinking.",
         "Praise Allah Almighty after drinking from it.",
         "It is permissible to perform ablution with Zamzam water.",
         "It is permissible to gift Zamzam water and to give it away generously.",
-        "It is permissible to carry Zamzam water to one's home and stock up on it if possible."
+        "It is permissible to carry Zamzam water to one's home and stock up on it if possible.",
       ],
     },
-  
-
-    
-
-   
-   
-   
   ],
 };
-
-

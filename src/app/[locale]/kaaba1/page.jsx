@@ -26,13 +26,13 @@ export default function Kaaba1() {
   const locale = useLocale();
 
   const lang = locale === "en" ? "en" : "ar";
-
+localStorage.setItem("index",0)
   return (
     <>
       <div className=" ">
         <img src="/2.png" alt="item" />
         <div className="justify-center flex py-4 px-4">
-          <Link href="/">
+          <Link href="/en#target0">
             <button>
               <svg
                 height="30"

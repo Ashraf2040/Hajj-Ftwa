@@ -18,8 +18,7 @@ export default function CardContent({
   src,
 }) {
   const locale = useLocale();
-  console.log(locale);
-  console.log(src);
+
   return (
     <Card
       shadow={false}
@@ -83,7 +82,7 @@ export default function CardContent({
           className="mb-6 text-lg font-bold text-start leading-[2]"
         >
           {ul.map((item, index) => (
-            <ul key={item} className="text-start">
+            <ul key={index} className="text-start">
               <li> - {item}</li>
             </ul>
           ))}

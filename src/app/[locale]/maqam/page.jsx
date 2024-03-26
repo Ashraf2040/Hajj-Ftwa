@@ -22,7 +22,7 @@ import { useLocale, useMessages, useTranslations } from "next-intl";
 export default function Maqam() {
   function getLinkHref() {
     // Logic to determine the URL
-    return "/#target";
+    return "/en#target4";
   }
 
   // const t = useTranslations("Kaaba1");
