@@ -27,7 +27,7 @@ const FatwaPage = () => {
   }, []);
 
 
-  
+  console.log(predefinedQuestions)
 
   const questionsToAsk = [];
   predefinedQuestions.forEach((element) => {
