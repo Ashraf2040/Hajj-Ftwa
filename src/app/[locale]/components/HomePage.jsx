@@ -1,14 +1,12 @@
 "use client";
 import { ReactTyped } from "react-typed";
 
-import { useEffect,  useState } from "react";
+import { useEffect, useState } from "react";
 import PredefinedQuestions from "./PrefefinedQuestions";
 import { useLocale } from "next-intl";
 import Link from "next/link";
 
 const FatwaPage = () => {
-
- 
   const [suggesstions, setSuggestions] = useState([]);
   const [userInput, setUserInput] = useState("");
   const [suggestionLinks, setSuggestionLinks] = useState(true);
@@ -26,8 +24,7 @@ const FatwaPage = () => {
     getQuestions();
   }, []);
 
-
-  console.log(predefinedQuestions)
+  console.log(predefinedQuestions);
 
   const questionsToAsk = [];
   predefinedQuestions.forEach((element) => {
@@ -48,23 +45,16 @@ const FatwaPage = () => {
     setSuggestions(filtered);
   }, [userInput]);
 
-  
-
-
- 
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
 
-    const questionAnswer = predefinedQuestions.find(
+    const questionAnswer =await predefinedQuestions.find(
       (question) => question.question === userInput
     );
     setAnswer(questionAnswer.answer);
     setAnswerBox(true);
     setSuggestions([]);
   };
-
-  
 
   const hanleCloseClick = () => {
     setAnswerBox(false);
@@ -82,7 +72,6 @@ const FatwaPage = () => {
   return (
     <div className=" ">
       <div className=" flex flex-col w-full   items-center  py-4   ">
-        
         <div className="navigate flex items-center  w-[90%] my-2">
           <form
             onSubmit={handleSubmit}
