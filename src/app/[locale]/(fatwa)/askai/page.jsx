@@ -8,6 +8,7 @@ import styles from "./loader.module.css";
 import Link from "next/link";
 import QuestionCard from "./QuestionCard";
 import Image from "next/image";
+import { useLocale } from 'next-intl';
 
 const AskAi = () => {
   const { status, messages, submitMessage, input, handleInputChange, error } =
@@ -58,7 +59,8 @@ const AskAi = () => {
   };
 
 
-
+   const locale=useLocale()
+   console.log(locale)
   return (
     <div className=" flex flex-col w-full  items-center  py-4   ">
       <div className="navigate flex items-center gap-2 my-2">
@@ -116,8 +118,8 @@ const AskAi = () => {
                   </div>
                   {m.role === "assistant" && (
                     <p
-                      style={{ direction: "rtl" }}
-                      className="whitespace-pre-wrap ml-8 w-4/5 bg-white self-center  p-10"
+                      style={{ direction: `${locale === "ar" ? "rtl" : "ltr"}` }}
+                      className="whitespace-pre-wrap ml-8 w-4/5 bg-white self-center   p-10"
                     >
                       {m.content}
                     </p>
